@@ -51,7 +51,7 @@ function App() {
 
         {isLoading
         ? <Spinner/>
-        : false ? joke!.value : <p>GERE UM NOVO FATO SOBRE CHUCK NORRIS</p>
+        : joke ? joke.value : <p>GERE UM NOVO FATO SOBRE CHUCK NORRIS</p>
         }
       </div>
 

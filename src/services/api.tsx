@@ -1,13 +1,10 @@
 import axios from 'axios';
-// import dotenv from 'dotenv';
-
-// dotenv.config();
 
 const fetchGraphQL = async (query: string) => {
     
   try {
     const response = await axios.post(
-        'http://localhost:3000/graphql',
+      import.meta.env.VITE_API_URL as string,
       {
         query: query,
       },
