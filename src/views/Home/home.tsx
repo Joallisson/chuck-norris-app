@@ -31,8 +31,6 @@ export const Home = () => {
         }
       `
 
-      console.log(query)
-
       const { data }: JokeRandomInterface = await fetchGraphQL(query)
       setJoke(data.jokeRandom)
 
