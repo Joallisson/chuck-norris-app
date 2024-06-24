@@ -1,6 +1,9 @@
+import React from 'react';
+
 export const Header = () => {
-    return(
-        <div
+    return (
+        <header
+            role="banner"
             className='
                 w-full 
                 max-w-screen-lg 
@@ -25,7 +28,9 @@ export const Header = () => {
                     font-bold 
                     text-white
                 '
-            >Fatos sobre Chuck Norris</h1>
-        </div>
-    )
-}
+            >
+                Fatos sobre Chuck Norris
+            </h1>
+        </header>
+    );
+};

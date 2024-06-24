@@ -1,9 +1,11 @@
-type Props = {
-    isLoading: boolean
-    handleClick: () => void
-}
+import React from 'react';
 
-export const Footer = ({handleClick, isLoading}: Props) => {
+type Props = {
+    isLoading: boolean;
+    handleClick: () => void;
+};
+
+export const Footer = ({ handleClick, isLoading }: Props) => {
     return (
         <div
             className='
@@ -40,9 +42,12 @@ export const Footer = ({handleClick, isLoading}: Props) => {
                     hover:scale-110
                 '
                 onClick={handleClick}
+                aria-busy={isLoading ? 'true' : 'false'}
             >
-                <p className="text-base md:text-lg lg:text-xl">GERAR MAIS FATOS</p>
+                <span className="text-base md:text-lg lg:text-xl">
+                    {isLoading ? 'CARREGANDO...' : 'GERAR MAIS FATOS'}
+                </span>
             </button>
         </div>
-    )
-}
+    );
+};

@@ -1,36 +1,36 @@
-import { CustomSelect } from "../CustomSelect/custom-select"
+import React from 'react';
+import { CustomSelect } from '../CustomSelect/custom-select';
 
 type PropsType = {
-    targetLangSelect: string
-    setTargetLangSelect: React.Dispatch<React.SetStateAction<string>>
-    categorySelect: string
-    setCategorySelect: React.Dispatch<React.SetStateAction<string>>
-}
+    targetLangSelect: string;
+    setTargetLangSelect: React.Dispatch<React.SetStateAction<string>>;
+    categorySelect: string;
+    setCategorySelect: React.Dispatch<React.SetStateAction<string>>;
+};
 
-export const Navbar = ({targetLangSelect, setTargetLangSelect, categorySelect, setCategorySelect}: PropsType) => {
-
+export const Navbar = ({ targetLangSelect, setTargetLangSelect, categorySelect, setCategorySelect }: PropsType) => {
     const categories = [
-        { label: "Sem categoria", value: ""},
-        { label: "Animal", value: "animal"},
-        { label: "Carreira", value: "career"},
-        { label: "Celebridade", value: "celebrity"},
-        { label: "Desenvolvedor", value: "dev"},
-        { label: "Explícito", value: "explicit"},
-        { label: "Moda", value: "fashion"},
-        { label: "Comida", value: "food"},
-        { label: "História", value: "history"},
-        { label: "Dinheiro", value: "money"},
-        { label: "Filme", value: "movie"},
-        { label: "Música", value: "music"},
-        { label: "Política", value: "political"},
-        { label: "Religião", value: "religion"},
-        { label: "Ciência", value: "science"},
-        { label: "Esporte", value: "sport"},
-        { label: "Viagem", value: "travel"},
-    ]
+        { label: "Sem categoria", value: "" },
+        { label: "Animal", value: "animal" },
+        { label: "Carreira", value: "career" },
+        { label: "Celebridade", value: "celebrity" },
+        { label: "Desenvolvedor", value: "dev" },
+        { label: "Explícito", value: "explicit" },
+        { label: "Moda", value: "fashion" },
+        { label: "Comida", value: "food" },
+        { label: "História", value: "history" },
+        { label: "Dinheiro", value: "money" },
+        { label: "Filme", value: "movie" },
+        { label: "Música", value: "music" },
+        { label: "Política", value: "political" },
+        { label: "Religião", value: "religion" },
+        { label: "Ciência", value: "science" },
+        { label: "Esporte", value: "sport" },
+        { label: "Viagem", value: "travel" },
+    ];
 
-    return(
-        <div
+    return (
+        <nav
             className='
                 flex
                 flex-col
@@ -46,29 +46,33 @@ export const Navbar = ({targetLangSelect, setTargetLangSelect, categorySelect, s
                 md:gap-5
                 lg:gap-10
                 mx-auto
+                bg-gray-200
             '
+            aria-label="Menu de navegação"
         >
             <CustomSelect
                 id="categorySelect"
                 itemSelect={categorySelect}
                 setItemSelect={setCategorySelect}
+                label="Seleção de categoria"
             >
                 {categories.map((category, index) => (
-                    <option id={'option_' + category.value} key={index} value={category.value}>
+                    <option key={index} value={category.value}>
                         {category.label}
                     </option>
-                ))}  
+                ))}
             </CustomSelect>
-            
+
             <CustomSelect
                 id="targetLangSelect"
                 itemSelect={targetLangSelect}
                 setItemSelect={setTargetLangSelect}
+                label="Seleção de idioma alvo"
             >
-                <option key={0} id="option_pt_BR" value="pt-BR">Português - Brasil</option>
-                <option key={1} id="option_en" value="en">English</option>
-                <option key={2} id="option_es" value="es">Español</option>
+                <option value="pt-BR">Português - Brasil</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
             </CustomSelect>
-        </div>
-    )
-}
+        </nav>
+    );
+};
