@@ -17,7 +17,8 @@ export const Spinner = () => {
                     justify-center 
                     space-x-2
                 '>
-                <div 
+                <div
+                    id="spinner"
                     className='
                         w-8 h-8 
                         border-4 

@@ -18,7 +18,7 @@ export const Navbar = ({targetLangSelect, setTargetLangSelect, categorySelect, s
         { label: "Explícito", value: "explicit"},
         { label: "Moda", value: "fashion"},
         { label: "Comida", value: "food"},
-        { label: "Hostória", value: "history"},
+        { label: "História", value: "history"},
         { label: "Dinheiro", value: "money"},
         { label: "Filme", value: "movie"},
         { label: "Música", value: "music"},
@@ -43,19 +43,21 @@ export const Navbar = ({targetLangSelect, setTargetLangSelect, categorySelect, s
             '
         >
             <CustomSelect
+                id="categorySelect"
                 itemSelect={categorySelect}
                 setItemSelect={setCategorySelect}
             >
-                {categories.map(category => <option value={category.value}>{category.label}</option>)}  
+                {categories.map((category, index) => <option id={'option_' + category.value} key={index} value={category.value}>{category.label}</option>)}  
             </CustomSelect>
             
             <CustomSelect
+                id="targetLangSelect"
                 itemSelect={targetLangSelect}
                 setItemSelect={setTargetLangSelect}
             >
-                <option value="pt-BR">Português - Brasil</option>
-                <option value="en">English</option>
-                <option value="es">Español</option>
+                <option key={0} id="option_pt_BR" value="pt-BR">Português - Brasil</option>
+                <option key={1} id="option_en" value="en">English</option>
+                <option key={2} id="option_es" value="es">Español</option>
             </CustomSelect>
         </div>
     )

@@ -2,11 +2,13 @@ type SelectType = {
     itemSelect: string;
     setItemSelect: React.Dispatch<React.SetStateAction<string>>;
     children: React.ReactNode;
+    id: string
 }
 
-export const CustomSelect = ({ itemSelect, setItemSelect, children }: SelectType) => {
+export const CustomSelect = ({ itemSelect, setItemSelect, children, id }: SelectType) => {
     return (
         <select 
+            id={id}
             className='
                 block
                 w-48

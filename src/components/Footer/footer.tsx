@@ -17,7 +17,8 @@ export const Footer = ({handleClick, isLoading}: Props) => {
                 bg-gray-200
             '
         >
-            <button 
+            <button
+                id="generateNewJoke"
                 disabled={isLoading}
                 className='
                     bg-green-500 
