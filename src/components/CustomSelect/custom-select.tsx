@@ -11,7 +11,10 @@ export const CustomSelect = ({ itemSelect, setItemSelect, children, id }: Select
             id={id}
             className='
                 block
-                w-48
+                w-full
+                max-w-xs
+                md:max-w-sm
+                lg:max-w-56
                 mt-1
                 px-3
                 py-2

@@ -4,17 +4,20 @@ type Props = {
 }
 
 export const Footer = ({handleClick, isLoading}: Props) => {
-
-    return(
+    return (
         <div
             className='
-                border-2
-                border-gray-500
-                w-1/2
+                w-full
+                max-w-screen-lg
                 flex
                 justify-center
                 py-4
                 bg-gray-200
+                mx-auto
+                px-4
+                border-2
+                border-gray-500
+                shadow-md
             '
         >
             <button
@@ -38,7 +41,7 @@ export const Footer = ({handleClick, isLoading}: Props) => {
                 '
                 onClick={handleClick}
             >
-                <p>GERAR MAIS FATOS</p>
+                <p className="text-base md:text-lg lg:text-xl">GERAR MAIS FATOS</p>
             </button>
         </div>
     )

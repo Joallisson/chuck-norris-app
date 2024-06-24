@@ -33,13 +33,19 @@ export const Navbar = ({targetLangSelect, setTargetLangSelect, categorySelect, s
         <div
             className='
                 flex
-                justify-end
+                flex-col
+                md:flex-row
+                justify-center
                 px-5
                 py-3
-                w-1/2
+                w-full
+                max-w-screen-lg
                 border-2
-                border-red-500
-                gap-x-10
+                border-slate-500
+                gap-3
+                md:gap-5
+                lg:gap-10
+                mx-auto
             '
         >
             <CustomSelect
@@ -47,7 +53,11 @@ export const Navbar = ({targetLangSelect, setTargetLangSelect, categorySelect, s
                 itemSelect={categorySelect}
                 setItemSelect={setCategorySelect}
             >
-                {categories.map((category, index) => <option id={'option_' + category.value} key={index} value={category.value}>{category.label}</option>)}  
+                {categories.map((category, index) => (
+                    <option id={'option_' + category.value} key={index} value={category.value}>
+                        {category.label}
+                    </option>
+                ))}  
             </CustomSelect>
             
             <CustomSelect
