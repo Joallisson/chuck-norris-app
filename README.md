@@ -1,6 +1,8 @@
 # Chuck Norris App
 
-Descrição curta ou sumário do projeto.
+Esta é uma aplicação feita em react com o propósito de se comunicar com uma api graphql para exibir fatos interessantes sobre chuck norris.
+A mesma inclui um dropdwon para selecionar a categoria do fato a ser gerado e outro dropdwon para escolher o idioma que será exibido.
+Esta aplição foi feita usando o tailwind para estilização e testada com o cypress com teste E2E.
 
 ## Requisitos
 
@@ -20,12 +22,12 @@ Descrição curta ou sumário do projeto.
     npm install
 
 ## Execução
-    Para iniciar a aplicação em modo de desenvolvimento:
+1. Para iniciar a aplicação em modo de desenvolvimento:
     ```bash
     npm run dev
 
 ## Testes E2E
-    Para executar os testes end-to-end com Cypress:
+1. Para executar os testes end-to-end com Cypress:
     ```bash
     npm run cypress:web
 
