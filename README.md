@@ -30,9 +30,3 @@ Esta aplição foi feita usando o tailwind para estilização e testada com o cy
 1. Para executar os testes end-to-end com Cypress:
     ```bash
     npm run cypress:web
-
-
-    
-
-
-
