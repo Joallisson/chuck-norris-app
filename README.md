@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+# Chuck Norris App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Descrição curta ou sumário do projeto.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node v18.20.2 ou superior
 
-## Expanding the ESLint configuration
+## Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Joallisson/chuck-norris-app.git
+   cd chuck-norris-app
 
-- Configure the top-level `parserOptions` property like this:
+2. Crie o arquivo .env seguindo o modelo do .env.example e defina a porta e a URL da API.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. Instale as dependências:
+    ```bash
+    npm install
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Execução
+    Para iniciar a aplicação em modo de desenvolvimento:
+    ```bash
+    npm run dev
+
+## Testes E2E
+    Para executar os testes end-to-end com Cypress:
+    ```bash
+    npm run cypress:web
+
+
+    
+
+
+
