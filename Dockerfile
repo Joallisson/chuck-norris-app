@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install --save-dev @types/axios @types/react
+RUN npm install
 
 COPY . .
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { JokeInterface } from '../../views/Home/joke.interface';
 import { Spinner } from '../Spinner/spinner';
 
